@@ -2,6 +2,7 @@ using { demo1.db as db } from '../db/schema';
 using { demo1.common as common } from '../db/common';
 
 
+
 service CatalogService {
     @Capabilities : {
         InsertRestrictions.Insertable :true,

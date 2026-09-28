@@ -3,6 +3,7 @@ namespace demo1.db;
 using { cuid, Currency } from '@sap/cds/common';
 using { demo1.common as common } from './common';
 
+
 context master {
     entity BusinessPartners {
         key NODE_KEY : common.Guid;

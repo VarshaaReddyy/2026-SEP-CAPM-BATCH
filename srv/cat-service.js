@@ -3,13 +3,7 @@ const cds = require("@sap/cds-dk/lib/")
 
 const cds1 = require('@sap/cds');
  
-const {
-exists,
-isdir,
-mkdirp,
-read,
-uuid
-} = cds1.utils;
+const {exists, isdir, mkdirp, read, uuid } = cds1.utils;
 
 
 module.exports = cds.service.impl(async function () {
