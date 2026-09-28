@@ -1,0 +1,250 @@
+http://localhost:4004/odata/v4/catalog/PurchaseItemsSrv
+
+
+###
+POST http://localhost:4004/odata/v4/catalog/createEmployee
+Content-Type: application/json 
+
+    {
+    "Currency_code": "USD",
+    "ID": "b61f6a0d-9ca7-45ea-b28c-8d2e72a8cb3a",
+    "accountNumber": null,
+    "bankId": null,
+    "bankName": null,
+    "email": null,
+    "gender": "F",
+    "language": "E",
+    "loginName": "SAV",
+    "nameFirst": "Savishna",
+    "nameInitials": "D",
+    "nameLast": "Reddy",
+    "nameMiddle": null,
+    "phoneNumber": "9100670453",
+    "salaryAmount": "26000.00"
+}
+
+###
+POST http://localhost:4004/odata/v4/catalog/createProduct
+Content-Type: application/json
+
+        {
+        "NODE_KEY" : "12ju",
+        "PRODUCT_ID" : "12ry",
+        "TYPE_CODE" : "SD",
+        "CATEGORY" : "Cosmetics",
+        "DESCRIPTION" : "cosmetic products",
+        "TAX_TARIF_CODE" : 456,
+        "MEASURE_UNIT" : "GM",
+        "WEIGHT_MEASURE" : "50",
+        "WEIGHT_UNIT" : "gm",
+        "PRICE" : "699.00",
+        "CURRENCY_CODE" : "IND",
+        "WIDTH" : "3",
+        "DEPTH" : "5",
+        "HEIGHT" : "10",
+        "DIM_UNIT" : "CM"
+}
+
+###
+POST http://localhost:4004/odata/v4/catalog/updateEmployee
+Content-Type: application/json
+
+{
+    "ID" : "b61f6a0d-9ca7-45ea-b28c-8d2e72a8cb3a",
+    "nameFirst" : " Sri",
+    "nameInitials" : "Gopalolla",
+    "nameLast" : "Reddy",
+    "nameMiddle" : "Varsha"
+}
+###
+POST http://localhost:4004/odata/v4/catalog/updateAddress
+Content-Type: application/json
+
+
+{
+    "NODE_KEY" : "ADDR001",
+    "CITY" : "HYDERABAD"
+}
+###
+POST http://localhost:4004/odata/v4/catalog/deleteEmployee
+Content-Type: application/json
+
+{
+    "ID" : "96e14993-4c8b-408e-95f5-86beec72f9db"
+    
+}
+###
+http://localhost:4004/odata/v4/catalog/ProductSrv/$count
+
+
+###
+http://localhost:4004/odata/v4/catalog/ProductSrv?top=10
+
+
+###
+http://localhost:4004/odata/v4/catalog/ProductSrv?$skip=10&$top=10
+
+###
+http://localhost:4004/odata/v4/catalog/ProductSrv?$filter=CATEGORY eq 'Notebooks'
+
+###
+http://localhost:4004/odata/v4/catalog/ProductSrv?$select= PRODUCT_ID,DESCRIPTION,CATEGORY,PRICE
+
+
+###
+http://localhost:4004/odata/v4/catalog/ProductSrv?$orderby=PRODUCT_ID desc
+
+
+###
+http://localhost:4004/odata/v4/catalog/ProductSrv('74867AD200E41EDBA5D8B06B26F86052')/PRODUCT_ID
+ 
+###
+http://localhost:4004/odata/v4/catalog/ProductSrv('74867AD200E41EDBA5D8B06B26F86052')/PRODUCT_ID/$value
+ 
+###
+http://localhost:4004/odata/v4/catalog/PurchaseOrderSrv?$expand=Items
+
+###
+http://localhost:4004/odata/v4/catalog/ProductSrv
+
+
+###
+POST http://localhost:4004/odata/v4/catalog/deleteEmployee
+Content-Type: application/json
+
+{
+    "ID" : "02BD2137-0890-1EEA-A6C2-BB55C19787FB"   
+}
+
+###
+POST http://localhost:4004/odata/v4/catalog/createEmployee
+Content-Type: application/json 
+
+    {
+    "Currency_code": "USD",
+    "ID": "b61f6a0d-9ca7-45ea-b28c-8d2e72a8ccd5",
+    "accountNumber": null,
+    "bankId": null,
+    "bankName": null,
+    "email": null,
+    "gender": "F",
+    "language": "E",
+    "loginName": "SAV",
+    "nameFirst": "Savishna",
+    "nameInitials": "D",
+    "nameLast": "Reddy",
+    "nameMiddle": null,
+    "phoneNumber": "9100670453",
+    "salaryAmount": "26000.00"
+}
+###
+PUT http://localhost:4004/odata/v4/catalog/EmployeeSrv/02BD2137-0890-1EEA-A6C2-BB55C197A7FB
+Content-Type: application/json
+
+    {
+        "salaryAmount" : "105000.00",
+        "Currency_code" : "USD"
+    }
+###
+PUT http://localhost:4004/odata/v4/catalog/ProductSrv/74867AD200E41EDBA5D8B06B26EB4052
+Content-Type: application/json
+
+    {
+        "PRICE" : "600"
+
+    }
+
+
+###
+PUT http://localhost:4004/odata/v4/catalog/PurchaseItemsSrv/74867AD200E41EDBA5D8B0CBD35B2052
+Content-Type: application/json
+
+    {
+        "CURRENCY_code" : "EUR",
+        "GROSS_AMOUNT": "222222"
+    }
+###
+PUT http://localhost:4004/odata/v4/catalog/AddressSrv/74867AD200E41EDBA5D8B06885668052
+Content-Type: application/json
+
+    {
+        "COUNTRY" : "IND"
+    }
+
+###
+PUT http://localhost:4004/odata/v4/catalog/EmployeeSrv/02BD2137-0890-1EEA-A6C2-BB55C19847FB
+Content-Type: application/json
+
+    {
+        "phoneNumber" : "+1 897835"
+    }
+###
+PUT http://localhost:4004/odata/v4/catalog/BusinessPartnersSrv/74867AD200E41EDBA5D8B06885994052
+Content-Type: application/json
+
+    {
+        "COMPANY_NAME" : "hi.i"
+    }
+###
+PUT http://localhost:4004/odata/v4/catalog/PurchaseItemsSrv/74867AD200E41EDBA5D8B0CBD35A0052
+Content-Type: application/json
+
+    {
+        "PO_ITEM_POS": 100
+    }
+###
+GET http://localhost:4004/odata/v4/catalog/getHighestSalariedEmployees
+
+###
+GET http://localhost:4004/odata/v4/catalog/getHeighestPricedProduct()
+###
+POST http://localhost:4004/odata/v4/catalog/EmployeeSrv
+Content-Type: application/json 
+
+    {
+    "Currency_code": "USD",
+    "ID": "b61f6a0d-9ca7-45ea-b28c-8d2e72a8cb3a",
+    "accountNumber": null,
+    "bankId": null,
+    "bankName": null,
+    "email": null,
+    "gender": "F",
+    "language": "E",
+    "loginName": "SAV",
+    "nameFirst": "Savishna",
+    "nameInitials": "D",
+    "nameLast": "Reddy",
+    "nameMiddle": null,
+    "phoneNumber": "9100670453",
+    "salaryAmount": "26000.00"
+}
+###
+GET http://localhost:4004/odata/v4/catalog/EmployeeSrv
+###
+POST http://localhost:4004/odata/v4/catalog/ProductSrv/74867AD200E41EDBA5D8B06B26EB4052/increasePrice
+Content-Type: application/json
+ 
+{}
+ 
+###
+GET http://localhost:4004/odata/v4/catalog/ProductSrv/74867AD200E41EDBA5D8B06B26EB4052/getTopProducts()
+###
+POST http://localhost:4004/odata/v4/catalog/PurchaseOrderSrv/74867AD200E41EDBA5D8B0C98DC74052/discountPrice
+Content-Type: application/json
+ 
+{}
+ 
+###
+GET http://localhost:4004/odata/v4/catalog/PurchaseOrderSrv/74867AD200E41EDBA5D8B0C98DC74052/largestOrder()
+
+
+###
+http://localhost:4004/odata/v4/catalog/EmployeeSrv/02BD2137-0890-1EEA-A6C2-BB55C197C7FB
+Content-Type: application/json
+ 
+{}
+
+###
+GET http://localhost:4004/odata/v4/catalog/EmployeeSrv/02BD2137-0890-1EEA-A6C2-BB55C197A7FB/highestPaid()
+###
+GET http://localhost:4004/odata/v4/catalog/getUtilities()
