@@ -9,6 +9,7 @@ modules:
     requires:
       - name: demo1-db
       - name: demo1-auth
+      - name: demo1-xsuaa
     provides:
       - name: srv-api
         properties:
@@ -56,6 +57,12 @@ resources:
     parameters:
       service: hana
       service-plan: hdi-shared
+  - name: demo1-xsuaa
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: xsuaa
+      service-plan: application
+      path: ./xs-security.json
   - name: demo1-repo-host
     type: org.cloudfoundry.managed-service
     parameters:

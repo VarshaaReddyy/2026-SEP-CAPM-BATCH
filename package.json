@@ -8,7 +8,7 @@
     "app/*"
   ],
   "scripts": {
-     "start": "hdi-deploy"
+     "start": "cds-serve"
   },
   "sapux": [
     "app/project1"
