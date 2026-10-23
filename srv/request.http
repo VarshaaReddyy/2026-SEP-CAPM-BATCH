@@ -248,3 +248,20 @@ Content-Type: application/json
 GET http://localhost:4004/odata/v4/catalog/EmployeeSrv/02BD2137-0890-1EEA-A6C2-BB55C197A7FB/highestPaid()
 ###
 GET http://localhost:4004/odata/v4/catalog/getUtilities()
+
+
+###
+POST http://localhost:4004/odata/v4/catalog/createPurchaseOrder
+Content-Type: application/json
+
+    {
+        "NODE_KEY" : "fb62348f-1de0-4e6b-b5b7-70d16d69ea39",
+        "PO_ID" : "a7fce9d9-f95a-4e44-ae4a-32421dcf4e41",
+        "PARTNER" : "3fa9bae9-23ee-4f8b-8b98-f961289623ec",
+        "LIFECYCLE_STATUS" : "N",
+        "OVERALL_STATUS" : "P",
+        "GROSS_AMOUNT": 5567,
+        "NET_AMOUNT" : 579,
+        "TAX_AMOUNT" : 7686,
+        "CURRENCY_CODE" : "EUR"
+    }
