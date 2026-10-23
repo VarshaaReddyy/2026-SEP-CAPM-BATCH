@@ -1,0 +1,10 @@
+.sapMDialog {
+    width: 70rem !important;
+    max-width: 70rem !important;
+}
+
+.sapMDialogSection {
+    min-width: 70rem !important;
+}
+
+ 

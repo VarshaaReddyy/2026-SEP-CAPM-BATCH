@@ -1,5 +1,29 @@
 {
   "dependencies": {
-    "@cap-js/hana": "^3.1.1"
+    "@cap-js/hana": "^3",
+    "@sap/cds": "^10.1.1",
+    "@sap/xssec": "^4"
+  },
+  "workspaces": [
+    "app/*"
+  ],
+  "scripts": {
+     "start": "cds-serve"
+  },
+  "sapux": [
+    "app/project1"
+  ],
+  "cds": {
+    "server": {
+      "index": true
+    },
+    "requires": {
+      "[production]": {
+        "auth": "xsuaa"
+      }
+    }
+  },
+  "devDependencies": {
+    "@sap/cds-dk": "^10.2.0"
   }
 }
